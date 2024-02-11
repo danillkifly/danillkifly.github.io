@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <link rel="icon" type="image/x-icon" href="img/pp-menu.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header">
+      <div class="container">
+        <a href="danill kifly.html" class="logo">
+          <img
+            src="img/2.png"
+            width="60%"
+            height="60%"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+
+        <ul class="menu">
+          <li class="menu_item">
+            <a href="danill kifly.html" class="menu_link">Home</a>
+          </li>
+          <li class="menu_item">
+            <a href="about.html" class="menu_link active-link">About</a>
+          </li>
+          <li class="menu_item">
+            <a href="blog.html" class="menu_link">Blog</a>
+          </li>
+          <li class="menu_item">
+            <a href="contact.html" class="menu_link">Contact</a>
+          </li>
+          <ion-icon name="close-outline" class="close_icon"></ion-icon>
+          <span class="close_text">Close</span>
+        </ul>
+        <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
+        <span class="toggle_text">Menu</span>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <section class="about section" id="about">
+        <h2 class="section_title">ABOUT</h2>
+      </section>
+
+      <!-- About Content Start -->
+      <section class="about" id="about">
+        <div class="about_container container grid">
+          <div class="about_section">
+            <h3>Danill Kifly</h3>
+          </div>
+          <div class="about_section">
+            <h1>
+              Halo, Danill Kifly disini - Kebetulan iseng aja buat blog ini.
+              Saya lahir tahun 2002, jadi bisa tebak sendiri sekarang usia
+              berapa wkwkwk... <span id="usia"></span> Sedikit informasi blog
+              ini dibuat semasa saya kuliah.
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- About Content End -->
+
+      <!-- About Background Start -->
+      <section class="about_bg"></section>
+      <!-- About Background End -->
+
+      <section class="about" id="about">
+        <div class="about_container container">
+          <div class="about_content">
+            <p>
+              Untuk kamu pembaca blog ini, baik yang sengaja nge-klik ataupun
+              tidak, perkenalkan namaku Moh. Kifly Danil. Bisa dipanggil Danil,
+              Kifly juga boleh. Lahir dan besar di kota Banyuwangi, kuliah pun
+              di Banyuwangi ngga pernah keluar jauh-jauh emang. Saya suka joging
+              pagi hari... kalo bangun, alias ngga bangkong hahaha. Mengenai
+              saya sendiri apa yang saya tampilkan di blog ini hanya suka-suka
+              ya, terlepas dari kehidupan sehari-hari.
+            </p>
+            <p>
+              Kuliah saya mengambil jurusan Agribisnis di Politeknik Negeri
+              Banyuwangi dan <u>sekarang masih semester 6</u>. Terdengar tidak
+              penting, tapi setidaknya saya bisa memulai obrolan sebagai
+              <b>Mahasiswa Pertanian.</b>
+            </p>
+            <p>
+              Satu hal mengawali dengan membuat blog ini, saya pengen tau aja
+              ngoding itu kayak gimana dan sulit ternyata gilak. Tutorial
+              youtube & google yang jadi acuan saya ngoding untuk blog ini.
+              Sebenarnya saya ngga bisa ngoding sama sekali, jadi semisal di
+              youtube & google codingan yang saya pengen ngga ada, pakelah chat
+              gbt suruh ngoding.
+            </p>
+            <p>
+              Oiya saya juga suka main game Mobile Legend bisa yok mabar, btw
+              udah pernah <b>Glory dan ngga joki !!!</b> santai aja ngga bakal
+              beban kok. Selain itu, saya suka dengerin lagu payung teduh tapi
+              bukan anak indie, cuma suka aja dengan lagu-lagunya. Dewa-19,
+              Pamungkas, dan Green Day juga suka dengerin.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Start -->
+      <footer>
+        <div class="footer_bg">
+          <div class="footer_container container">
+            <div class="main_footer">
+              <div class="footer_social">
+                <a href="https://www.instagram.com/danillkifly/"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a
+                  href="https://www.youtube.com/channel/UCazK6fSVpdDOhtP-Cjpbd0w"
+                  ><ion-icon name="logo-youtube"></ion-icon
+                ></a>
+              </div>
+            </div>
+            <div class="footer_copy">Copyright &#169; 2024 Danill Kifly</div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </main>
+
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- IonIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Java Script -->
+    <script src="js/script.js"></script>
+
+    <script>
+      // Hitung usia berdasarkan tanggal lahir
+      function hitungUsia(tanggalLahir) {
+        var dob = new Date(tanggalLahir);
+        var sekarang = new Date();
+        var usia = sekarang.getFullYear() - dob.getFullYear();
+
+        // Periksa jika ulang tahun belum terjadi pada tahun ini
+        if (
+          sekarang.getMonth() < dob.getMonth() ||
+          (sekarang.getMonth() == dob.getMonth() &&
+            sekarang.getDate() < dob.getDate())
+        ) {
+          usia--;
+        }
+
+        return usia;
+      }
+
+      // Tentukan tanggal lahir
+      var tanggalLahir = "2002-09-10"; // Format tanggal adalah YYYY-MM-DD
+
+      // Hitung usia berdasarkan tanggal lahir
+      var usia = hitungUsia(tanggalLahir);
+
+      // Tampilkan usia di dalam span dengan id "usia"
+      document.getElementById("usia").innerHTML =
+        "<em>" + usia + "</em> <em>th.</em>";
+    </script>
+  </body>
+</html>

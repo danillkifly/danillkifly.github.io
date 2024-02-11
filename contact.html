@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <link rel="icon" type="image/x-icon" href="img/pp-menu.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="header">
+      <div class="container">
+        <a href="danill kifly.html" class="logo">
+          <img
+            src="img/2.png"
+            width="60%"
+            height="60%"
+            alt=""
+            class="img-fluid"
+          />
+        </a>
+
+        <ul class="menu">
+          <li class="menu_item">
+            <a href="danill kifly.html" class="menu_link">Home</a>
+          </li>
+          <li class="menu_item">
+            <a href="about.html" class="menu_link">About</a>
+          </li>
+          <li class="menu_item">
+            <a href="blog.html" class="menu_link">Blog</a>
+          </li>
+          <li class="menu_item">
+            <a href="contact.html" class="menu_link active-link">Contact</a>
+          </li>
+          <ion-icon name="close-outline" class="close_icon"></ion-icon>
+          <span class="close_text">Close</span>
+        </ul>
+        <ion-icon name="menu-outline" class="toggle_icon"></ion-icon>
+        <span class="toggle_text">Menu</span>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <main>
+      <section class="contact section" id="contact">
+        <h2 class="section_title">CONTACT</h2>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact_container container grid">
+          <div class="contact_section">
+            <form action="#">
+              <div class="input-box">
+                <div class="input-field field">
+                  <input
+                    type="text"
+                    placeholder="Full Name"
+                    id="name"
+                    class="item"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">Full Name can't be blank</div>
+                </div>
+
+                <div class="input-field field">
+                  <input
+                    type="text"
+                    placeholder="Email Address"
+                    id="email"
+                    class="item"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">Email Address can't be blank</div>
+                </div>
+              </div>
+
+              <div class="input-box">
+                <div class="input-field field">
+                  <input
+                    type="text"
+                    placeholder="Phone Number"
+                    id="phone"
+                    class="item"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    id="subject"
+                    class="item"
+                    autocomplete="off"
+                  />
+                  <div class="error-txt">Subject can't be blank</div>
+                </div>
+              </div>
+
+              <div class="textarea-field field">
+                <textarea
+                  name=""
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Your Message"
+                  class="item"
+                  autocomplete="off"
+                ></textarea>
+                <div class="error-txt">Message can't be blank</div>
+              </div>
+              <button type="submit">SEND</button>
+            </form>
+          </div>
+          <div class="contact_section">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+              molestias exercitationem accusamus quos, eaque veritatis neque
+              ducimus doloribus. Cupiditate nisi commodi error necessitatibus
+              est debitis dignissimos eius quam, dolores saepe!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Start -->
+      <footer>
+        <div class="footer_bg">
+          <div class="footer_container container">
+            <div class="main_footer">
+              <div class="footer_social">
+                <a href="https://www.instagram.com/danillkifly/"
+                  ><ion-icon name="logo-instagram"></ion-icon
+                ></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a
+                  href="https://www.youtube.com/channel/UCazK6fSVpdDOhtP-Cjpbd0w"
+                  ><ion-icon name="logo-youtube"></ion-icon
+                ></a>
+              </div>
+            </div>
+            <div class="footer_copy">
+              <p>
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Danill Kifly
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </main>
+
+    <!-- IonIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Send Email -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Java Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
