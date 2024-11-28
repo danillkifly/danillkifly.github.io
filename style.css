@@ -359,14 +359,21 @@ section {
 }
 
 .home-content img {
-  width: 240px; /* Atur ukuran gambar */
+  width: 240px;
   position: relative; /* Pastikan gambar berada di atas teks */
   z-index: 3; /* Atur lapisan gambar lebih tinggi */
   border-radius: 15%;
   cursor: pointer;
+  filter: grayscale(100%); /* Awalnya hitam putih */
+  transition: filter 0.5s ease-in-out;
+}
+
+.home-content img:hover {
+  filter: grayscale(0%); /* Kembali ke warna asli saat hover */
 }
 
 .home-content h1 {
+  cursor: none;
   display: flex;
   flex-direction: column;
   font-size: 10rem;
