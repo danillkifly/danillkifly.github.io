@@ -889,6 +889,9 @@ section {
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transition: all 0.5s ease;
+  display: flex; /* Tambahkan */
+  flex-direction: column; /* Atur arah elemen anak menjadi vertikal */
+  align-items: center;
 }
 
 .music:hover {
@@ -900,7 +903,6 @@ section {
   height: 300px;
   position: relative;
   top: -50px;
-  left: 50px;
 }
 
 .player-img img {
@@ -963,15 +965,16 @@ section {
 
 .player-controls {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   top: -15px;
-  left: 120px;
-  width: 200px;
+  gap: 30px;
 }
 
 .player-controls i {
   font-size: 30px;
   color: var(--second-color);
-  margin-right: 30px;
   cursor: pointer;
   user-select: none;
   transition: all 0.3s ease;
@@ -984,7 +987,6 @@ section {
 #play {
   font-size: 44px;
   position: relative;
-  top: 3px;
 }
 
 /* ----- SUKA-SUKA ----- */
