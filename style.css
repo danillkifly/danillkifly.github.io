@@ -745,6 +745,7 @@ section {
 .suka-suka {
   margin: 0;
   padding: 0;
+  height: fit-content;
 }
 
 .suka-content {
@@ -987,6 +988,50 @@ section {
 #play {
   font-size: 44px;
   position: relative;
+}
+
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: conic-gradient(
+    from var(--rotate) at 46% 18%,
+    #27272a 40%,
+    #828286,
+    #eeeeee 60%
+  );
+  font-size: 120px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: rotateLight 3s ease-in-out infinite alternate;
+}
+
+@keyframes rotateLight {
+  from {
+    --rotate: 0.22turn;
+  }
+  to {
+    --rotate: -0.25turn;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .light {
+    font-size: 63px;
+    background-image: conic-gradient(
+      from var(--rotate) at 41.7% 18%,
+      #27272a 40%,
+      #828286,
+      #eeeeee 60%
+    );
+  }
 }
 
 /* ----- SUKA-SUKA ----- */
