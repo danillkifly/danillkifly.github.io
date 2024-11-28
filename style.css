@@ -48,7 +48,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   z-index: 10;
 }
 
@@ -71,13 +70,23 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 7px;
 }
 
 .logo a {
   font-size: 17.5px;
   color: var(--main-color);
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo i {
+  transition: transform 0.3s ease-in-out; /* Smooth rotation */
+}
+
+.logo a:hover i {
+  transform: rotate(360deg); /* Full rotation animation */
 }
 
 .logo span {
@@ -563,7 +572,7 @@ section {
 .item {
   width: 400px;
   height: 230px;
-  background-color: red;
+  background-color: var(--black-color);
   position: absolute;
   left: max(calc(400px * 5), 100%);
   animation-name: scrollLeft;
@@ -580,11 +589,10 @@ section {
   width: 400px;
   height: 230px;
   display: block;
-  transition: transform 0.5s, filter 0.5s;
+  transition: filter 0.5s;
 }
 
 .item:hover img {
-  transform: scale(1.1);
   filter: blur(5px); /* Menambahkan efek blur */
 }
 
@@ -637,6 +645,51 @@ section {
 
 .item:hover .layer {
   height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .about-me {
+    padding: 0 30px 0 30px;
+    margin: 0;
+  }
+
+  .about-me h1 {
+    font-size: 4rem;
+  }
+
+  .aboutme-content {
+    padding: 0 30px 0 30px;
+    margin: 0;
+  }
+
+  .experience {
+    padding: 0 30px 0 30px;
+    margin: 0;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1536px;
+    height: 210px;
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 4%,
+      rgba(0, 0, 0, 1) 96%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+
+  .item {
+    width: 380px;
+    height: 210px;
+    left: max(calc(380px * 5), 100%);
+  }
+
+  .item img {
+    width: 380px;
+    height: 210px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -822,6 +875,13 @@ section {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .suka-judul {
+    padding: 0 30px 0 30px;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .suka-judul {
     padding: 0 25px 0 25px;
@@ -845,6 +905,7 @@ section {
 }
 
 .suka-music {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1088,7 +1149,7 @@ button .kirim {
 
 button .kirim h2 {
   font-size: 17px;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 button i {
@@ -1102,6 +1163,22 @@ button i {
   transition: 0.3s ease-in-out;
 }
 
+@media screen and (max-width: 992px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 40rem;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-img img {
+    width: 600px;
+    height: auto;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .contact-content {
     flex-direction: column;
@@ -1110,6 +1187,10 @@ button i {
   .contact-img img {
     width: 400px;
     height: auto;
+  }
+
+  button .kirim h2 {
+    font-weight: 600;
   }
 }
 
