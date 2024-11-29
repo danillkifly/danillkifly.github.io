@@ -28,6 +28,50 @@ body {
   min-height: 100vh;
 }
 
+/* Splash screen */
+
+.splash {
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+.logo-intro {
+  color: var(--third-color);
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  bottom: -20px;
+  opacity: 0;
+}
+
+.logo-intro.active {
+  bottom: 0;
+  opacity: 1;
+  transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
+}
+
+/* Splash screen */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -292,18 +336,26 @@ section {
   padding: 0;
   margin: 0;
   background-color: var(--white-color);
+  align-items: center; /* Memusatkan secara horizontal */
+  justify-content: center; /* Memusatkan secara vertikal */
+  height: fit-content;
 }
 
 .home-content {
   display: flex;
-  align-items: center; /* Memusatkan secara horizontal */
-  justify-content: center; /* Memusatkan secara vertikal */
-  position: absolute;
-  width: 100%;
-  height: 100vh;
+  flex-direction: column;
+  position: relative;
 }
 
-.home-content .loading {
+.home-top {
+  display: flex;
+  align-items: center; /* Memusatkan secara horizontal */
+  justify-content: center;
+  width: 100%;
+  height: 80vh;
+}
+
+.home-top .loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,7 +419,7 @@ section {
   }
 }
 
-.home-content img {
+.home-top img {
   width: 240px;
   position: relative; /* Pastikan gambar berada di atas teks */
   z-index: 3; /* Atur lapisan gambar lebih tinggi */
@@ -377,12 +429,11 @@ section {
   transition: filter 0.5s ease-in-out;
 }
 
-.home-content img:hover {
+.home-top img:hover {
   filter: grayscale(0%); /* Kembali ke warna asli saat hover */
 }
 
-.home-content h1 {
-  cursor: none;
+.home-top h1 {
   display: flex;
   flex-direction: column;
   font-size: 10rem;
@@ -394,7 +445,7 @@ section {
   margin: 0;
 }
 
-.home-content h1 .middle-name {
+.home-top h1 .middle-name {
   display: flex;
   font-size: 6rem;
   color: var(--main-color);
@@ -404,28 +455,50 @@ section {
   overflow: hidden; /* Opsional: untuk menyembunyikan teks yang melewati batas */
 }
 
+.home-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow: hidden;
+}
+
+.hb-1 {
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+.hb-1:hover {
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+}
+
+.home-bottom img {
+  width: 350px;
+}
+
 @media screen and (max-width: 768px) {
-  .home-content h1 {
+  .home-top h1 {
     font-size: 8rem;
     font-weight: 800;
   }
 
-  .home-content h1 .middle-name {
+  .home-top h1 .middle-name {
     font-size: 6rem;
     font-weight: 600;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .home-content img {
+  .home-top img {
     width: 200px;
   }
 
-  .home-content h1 {
+  .home-top h1 {
     font-size: 6rem;
   }
 
-  .home-content h1 .middle-name {
+  .home-top h1 .middle-name {
     font-size: 3rem;
   }
 }
