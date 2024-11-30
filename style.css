@@ -256,10 +256,6 @@ body {
   color: var(--white-color);
 }
 
-.links .social-links li a:hover {
-  color: #007bff; /* Warna efek hover */
-}
-
 @media screen and (max-width: 768px) {
   .head-content {
     padding: 0 15px 0 15px;
