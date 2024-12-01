@@ -1322,7 +1322,7 @@ button i {
 .kanan-kiri {
   font-size: 12vw;
   position: relative;
-  color: #99948d;
+  color: var(--second-color);
   display: inline-block;
   margin: 0;
   will-change: transform;
