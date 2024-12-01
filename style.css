@@ -422,7 +422,8 @@ section {
   border-radius: 15%;
   cursor: pointer;
   filter: grayscale(100%); /* Awalnya hitam putih */
-  transition: filter 0.5s ease-in-out;
+  transition: all 0.9s;
+  border-radius: 10% 50% 10% 50% / 50% 10% 50% 10%;
 }
 
 .home-top img:hover {
