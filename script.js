@@ -180,3 +180,84 @@ playerProgress.addEventListener("click", setProgressBar);
 
 loadMusic(songs[musicIndex]);
 // Music
+
+// Kanan-Kiri
+
+// Selektor hanya untuk elemen di dalam .right-left
+const container = document.querySelector(".right-left");
+const el = document.querySelector(".kanan-kiri");
+
+// Variabel untuk lebar container dan elemen
+let containerWidth = container.offsetWidth;
+let elWidth = el.offsetWidth;
+
+// Variabel untuk posisi mouse
+let mouseX = 0;
+let prevMouseX = 0;
+
+// Target animasi
+let skewTarget = 0;
+let translateTarget = 0;
+
+// Variabel easing
+let skewWithEasing = 0;
+let translateWithEasing = 0;
+const skewEasingFactor = 0.1;
+const translateEasingFactor = 0.05;
+
+// Event Listener
+container.addEventListener("mousemove", handleMouseMove);
+window.addEventListener("resize", handleWindowResize);
+
+// Fungsi menangani gerakan mouse
+function handleMouseMove(e) {
+  // Mengambil posisi mouse relatif terhadap container
+  const rect = container.getBoundingClientRect();
+  mouseX = e.clientX - rect.left;
+}
+
+// Fungsi untuk menyesuaikan ulang ukuran
+function handleWindowResize() {
+  containerWidth = container.offsetWidth;
+  elWidth = el.offsetWidth;
+}
+
+// Fungsi interpolasi (easing)
+function lerp(start, end, factor) {
+  return (1 - factor) * start + factor * end;
+}
+
+// Fungsi animasi
+function animateMe() {
+  // Menghitung perbedaan posisi mouse
+  skewTarget = mouseX - prevMouseX;
+  prevMouseX = mouseX;
+
+  // Menghitung target terjemahan elemen
+  translateTarget = ((elWidth - containerWidth) / containerWidth) * mouseX * -1;
+
+  // Menambahkan easing untuk skew
+  skewWithEasing = lerp(skewWithEasing, skewTarget, skewEasingFactor);
+  skewWithEasing = Math.min(Math.max(parseInt(skewWithEasing), -75), 75);
+
+  // Menambahkan easing untuk translasi
+  translateWithEasing = lerp(
+    translateWithEasing,
+    translateTarget,
+    translateEasingFactor
+  );
+
+  // Mengatur transformasi elemen
+  el.style.transform = `
+    translateX(${translateWithEasing}px)
+    skewX(${skewWithEasing}deg)
+  `;
+
+  // Meminta frame berikutnya
+  window.requestAnimationFrame(animateMe);
+}
+
+// Memulai animasi
+window.requestAnimationFrame(animateMe);
+
+// Kanan-Kiri

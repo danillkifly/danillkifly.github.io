@@ -43,7 +43,7 @@ body {
 
 .logo-header {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #ffffff;
@@ -1311,3 +1311,20 @@ button i {
 }
 
 /* -- CONTACT -- */
+
+.right-left {
+  overflow: hidden;
+  cursor: ew-resize;
+  white-space: nowrap;
+  padding: 0.1vh 0;
+}
+
+.kanan-kiri {
+  font-size: 12vw;
+  position: relative;
+  color: #99948d;
+  display: inline-block;
+  margin: 0;
+  will-change: transform;
+  padding: 0 5% 0;
+}
