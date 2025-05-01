@@ -1092,6 +1092,28 @@ section {
   }
 }
 
+.yt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.yt iframe {
+  width: 720px;
+  height: 405px;
+  border-radius: 10px;
+}
+
+.hehe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hehe i {
+  font-size: 50px;
+}
+
 @media screen and (max-width: 576px) {
   .light {
     font-size: 63px;
@@ -1101,6 +1123,11 @@ section {
       #828286,
       #eeeeee 60%
     );
+  }
+
+  .yt iframe {
+    width: 400px;
+    height: 220px;
   }
 }
 
