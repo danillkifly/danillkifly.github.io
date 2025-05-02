@@ -1124,14 +1124,74 @@ section {
   height: 405px;
 }
 
+.jam {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datetime {
+  color: #fff;
+  background-color: var(--main-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 340px;
+  padding: 15px 10px;
+  border: 3px solid var(--second-color);
+  border-radius: 5px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.1));
+  transition: 0.5s;
+  transition-property: background-color, box-shadow;
+}
+
+.datetime:hover {
+  background-color: transparent;
+  box-shadow: 0 0 30px var(--second-color);
+}
+
+.date {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time span:not(:last-child) {
+  position: relative;
+  margin: 0 6px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.time span:last-child {
+  background-color: var(--second-color);
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0 5px;
+  border-radius: 3px;
+}
+
 .hehe {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.hehe p {
+  font-size: 20px;
+}
+
 .hehe i {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 576px) {
