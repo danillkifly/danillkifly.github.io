@@ -106,6 +106,18 @@ const songs = [
     cover: "assets/4.jpg",
     artist: "Bring Me The Horizon",
   },
+  {
+    path: "assets/5.mp3",
+    displayName: "Don't Look Away",
+    cover: "assets/5.jpg",
+    artist: "The Plot In You",
+  },
+  {
+    path: "assets/6.mp3",
+    displayName: "Artificial Suicide",
+    cover: "assets/6.jpg",
+    artist: "BAD OMENS",
+  },
 ];
 
 let musicIndex = 0;
