@@ -130,7 +130,7 @@ body {
 }
 
 .logo a:hover i {
-  transform: rotate(360deg); /* Full rotation animation */
+  transform: rotate(720deg); /* Full rotation animation */
 }
 
 .logo span {
