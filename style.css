@@ -1194,6 +1194,19 @@ section {
   font-size: 30px;
 }
 
+.cek-kesehatan {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.cek-kesehatan h1 {
+  color: var(--main-color);
+  font-size: 2em;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 576px) {
   .light {
     font-size: 63px;
@@ -1208,6 +1221,10 @@ section {
   .yt iframe {
     width: 400px;
     height: 220px;
+  }
+
+  .cek-kesehatan h1 {
+    font-size: 1em;
   }
 }
 
