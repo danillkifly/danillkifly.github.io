@@ -276,5 +276,5 @@ window.requestAnimationFrame(animateMe);
 
 // Cek Kesehatan
 function cek() {
-  window.open("https://danillkifly.github.io/cek-kesehatan/", "_blank");
+  window.open("https://cek-kesehatan.vercel.app/", "_blank");
 }
